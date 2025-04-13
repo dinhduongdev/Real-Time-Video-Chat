@@ -23,8 +23,8 @@
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/username/repository-name.git
-cd repository-name
+git clone https://github.com/dinhduongdev/Real-Time-Video-Chat.git
+cd Real-Time-Video-Chat
 ```
 
 ### 2. Cài đặt các dependency
@@ -43,28 +43,7 @@ Cài đặt các thư viện từ `requirements.txt`:
 pip install -r requirements.txt
 ```
 
-### 3. Cài đặt Redis
-
-Redis được sử dụng làm Channel Layer để quản lý WebSocket connection.
-
-Cài đặt Redis từ [Redis website](https://redis.io/download) hoặc sử dụng dịch vụ Redis trên cloud.
-
-### 4. Cấu hình settings.py
-
-Trong file `settings.py`, cấu hình `CHANNEL_LAYERS`:
-
-```python
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
-```
-
-### 5. Áp dụng migrations
+### 3. Áp dụng migrations
 
 Áp dụng các migrations để tạo database:
 
@@ -72,7 +51,7 @@ CHANNEL_LAYERS = {
 python manage.py migrate
 ```
 
-### 6. Chạy server
+### 4. Chạy server
 
 Chạy server với Django ASGI:
 

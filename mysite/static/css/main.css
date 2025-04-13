@@ -1,0 +1,22 @@
+.video-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 60% 20%;
+}
+
+video {
+    border-radius: 25%;
+    background-color: black;
+}
+
+.messages ul li {
+    padding: 6px 10px;
+    background: #f0f0f0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

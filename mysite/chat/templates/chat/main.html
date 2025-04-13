@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Video Chat Room</title>
+</head>
+<body>
+    <header>
+        <h3 id="label-username">USERNAME</h3>
+        <div class="join-section">
+            <input id="username" type="text" placeholder="Enter your username" />
+            <button id="btn-join">Join Room</button>
+        </div>
+    </header>
+
+    <main class="main-grid-container">
+        <section id="video-container" class="video-wrapper">
+            <div class="local-video-container">
+                <video id="local-video" autoplay playsinline muted></video>
+            </div>
+
+            <div class="controls">
+                <button id="btn-toggle-audio">Audio Mute</button>
+                <button id="btn-toggle-video">Video Off</button>
+            </div>
+        </section>
+
+        <section class="chat-section">
+            <h3>CHAT</h3>
+            <div class="messages">
+                <ul id="message-list" style="list-style: none; padding: 0;"></ul>
+            </div>
+              
+            <div class="message-input">
+                <input id="msg-input" type="text" placeholder="Type your message" />
+                <button id="btn-send-msg">Send</button>
+            </div>
+            <button id="btn-share-screen" class="secondary-btn">Share Screen</button>
+        </section>
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
